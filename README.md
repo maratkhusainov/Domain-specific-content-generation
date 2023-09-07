@@ -16,18 +16,24 @@ In concept, briefly and without any details, the process might be described usin
 
 <!-- ![photo](diffusion_model.png)  -->
 
-$$ x_t = \sqrt{\alpha_t} x_{t-1} + \sqrt{1-\alpha_t} \epsilon_t ; \:\: \epsilon_t \sim \mathcal{N}(0,I)$$
+```math
+ x_t = \sqrt{\alpha_t} x_{t-1} + \sqrt{1-\alpha_t} \epsilon_t ; \:\: \epsilon_t \sim \mathcal{N}(0,I)$$
+```
 
-
+```math
 $$\hat{x}_{t-1} = \frac{1}{\sqrt{\alpha_t}} \left(x_t - \frac{1 - \alpha_t}{\sqrt{1 - \bar{\alpha_t}}} \epsilon_\Theta(x_t, t) \right) + \sigma_t z,$$  
+```
+where $`\bar{\alpha}_t = \prod\nolimits_{i=1}^t \alpha_t`$ ,  $`z \sim \mathcal{N}(0,I)`$
+and $` \sigma_t = const.`$
 
-where $\bar{\alpha}_t = \prod_{i=1}^{t} \alpha_t$ ,  $z \sim \mathcal{N}(0,I)$ and $ \sigma_t = const$.
 
 ![photo](diffusion_model.png) 
 
 So, the task of training the model is to minimize this loss:
 
-$$ \mathcal{L}_t = \|x_{t-1} - \hat{x}_{t-1}\|_2 \propto \| \epsilon - \epsilon_\Theta(x_t, t)\|_2 \rightarrow \min_{\Theta} .$$
+ ```math
+\mathcal{L}_t = \|x_{t-1} - \hat{x}_{t-1}\|_2 \propto \| \epsilon - \epsilon_\Theta(x_t, t)\|_2 \rightarrow \min_{\Theta} .
+```
 
 
 ### [DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation](https://arxiv.org/abs/2208.12242) | Paper review
