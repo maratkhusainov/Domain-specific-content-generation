@@ -30,7 +30,7 @@ So, the task of training the model is to minimize this loss:
 $$ \mathcal{L}_t = \|x_{t-1} - \hat{x}_{t-1}\|_2 \propto \| \epsilon - \epsilon_\Theta(x_t, t)\|_2 \rightarrow \min_{\Theta} .$$
 
 
-### DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation | Paper review
+### [DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation](https://arxiv.org/abs/2208.12242) | Paper review
 
 ####   Main idea 
 
