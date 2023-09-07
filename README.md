@@ -45,7 +45,7 @@ Compared to Image Composition techniques their approach enables generation of su
 Authors of the article show experiments and applications, and the results are really impressive. They were able to preserve the unique visual features that give the subject its identity and essence. And it was observed that DreamBooth better preserves subject identity, and is more faithful to prompts.
 
 ### My examples of DreamBooth finetuning
-I have finetuned model using SpongeBob images and searched for hyperparametres using grid search. Here are some examples.
+I have finetuned model using SpongeBob images and searched for hyperparametres using grid search. Here are some examples with lr = 3e-4 and 1000 steps.
 
 ![photo](output1.png)
 
