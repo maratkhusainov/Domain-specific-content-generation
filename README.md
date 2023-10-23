@@ -1,4 +1,4 @@
-## TLab 2023. Domain-specific content generation
+## Domain-specific content generation
 
 ### Diffusion Models
 
